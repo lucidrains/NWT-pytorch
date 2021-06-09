@@ -1,6 +1,8 @@
 ## NWT - Pytorch (wip)
 
-Implementation of <a href="https://arxiv.org/abs/2106.04283">NWT</a>, audio-to-video generation, in Pytorch
+Implementation of <a href="https://arxiv.org/abs/2106.04283">NWT</a>, audio-to-video generation, in Pytorch.
+
+<a href="https://next-week-tonight.github.io/NWT/">Generated samples</a>
 
 ## Citations
 
