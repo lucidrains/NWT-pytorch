@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-  name = 'nwt_pytorch',
+  name = 'nwt-pytorch',
   packages = find_packages(),
   version = '0.0.1',
   license='MIT',
