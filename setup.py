@@ -16,7 +16,7 @@ setup(
     'audio to video synthesis'
   ],
   install_requires=[
-    'einops',
+    'einops>=0.4',
     'torch'
   ],
   classifiers=[
