@@ -29,7 +29,7 @@ x = torch.randn(1, 1024, 512)
 out, codebook_indices = codebook(x) # (1, 1024, 512), (1, 1024, 8)
 # (batch, seq, dimension), (batch, seq, heads)
 
-# from the codebook indices, whether during encoding you can reconstruct the output
+# reconstruct output from codebook indices (codebook indices are autoregressed out from an attention net in paper)
 
 assert torch.allclose(codebook.get_codes_from_indices(codebook_indices), out)
 ```
