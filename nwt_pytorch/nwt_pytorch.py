@@ -40,6 +40,7 @@ class Memcodes(nn.Module):
         self.dim = dim
         self.scale = (dim // heads) ** -0.5
         self.temperature = temperature
+        self.num_codes = num_codes
 
         num_codebooks = heads
         codebook_dim = dim // heads
@@ -83,7 +84,7 @@ class Memcodes(nn.Module):
             codebook_indices = attn.argmax(dim = -1)
         else:
             codebook_indices = logits.argmax(dim = -1)
-            attn = F.one_hot().float()
+            attn = F.one_hot(codebook_indices, num_classes = self.num_codes).float()
 
         out = einsum('b h i j, h j d -> b h i d', attn, v)
 
